@@ -149,31 +149,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="使用参数注入属性"><a href="#使用参数注入属性" class="headerlink" title="使用参数注入属性"></a>使用参数注入属性</h2><p>创建用户类-User.java：<br>public class User {</p>
-<pre><code>private String username;
-//有参构造,就没有无参构造即无法创建对象
-public User(String username) {
-    this.username = username;
-}
-public void add(){
-    System.out.println(&quot;add.............&quot;);
-}
-public static void mian(String[] args){
-//原始方法
-//User user=new User();
-//user.add();
-}</code></pre><p>}</p>
-<p>创建一个实验类-PropertyDemo1.java：<br>public class PropertyDemo1 {<br>    private String username；<br>    public PropertyDemo1（String username）<br>    {<br>        this.username = username；<br>    }<br>    public void test1(){<br>        System.out.println(“demo1….”+username);<br>    }<br>}</p>
-<p>添加配置文件-bean1.xml：<br>在src中书写配置，注册对象到容器，<br>书写xml文件，applicationContext.xml放在src下：<br><?xml version="1.0" encoding="UTF-8"?><br><beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-xmlns="http://www.springframework.org/schema/beans" 
-xsi:schemaLocation="http://www.springframework.org/schema/beans 
-http://www.springframework.org/schema/beans/spring-beans-4.2.xsd "></p>
-<pre><code>&lt;bean  name=&quot;demo&quot; class=&quot;cn.itcast.bean.User&quot; &gt;//demo相当于使用ID，class为其所属包路径
-    &lt;!--使用参数注入，注入数据“小孩”--&gt;
-    &lt;constructor-arg name=&quot;username&quot; value=&quot;小孩&quot;&gt;&lt;/constructor-arg&gt;
-&lt;/bean&gt;</code></pre><beans>
-
-<p>调用的测试方法-TestIOC.java<br>public class TestIOC{<br>    @Test<br>    public void testUser(){<br>        //加载string配置文件<br>        ApplicationContext context = new ClassPathXmlApplicationContext(“bean1.xml”);<br>        //得到配置创建的对象<br>        PropertyDemo1 demo1 = (PropertyDemo1) context.getBean(“demo”);<br>        //执行其方法<br>        demo1.test1();<br>    }<br>}</p>
+        <h2 id="使用参数注入属性"><a href="#使用参数注入属性" class="headerlink" title="使用参数注入属性"></a>使用参数注入属性</h2><p>创建用户类-User.java：<br>    public class User {<br>        private String username;<br>        //有参构造,就没有无参构造即无法创建对象<br>        public User(String username) {<br>            this.username = username;<br>        }<br>        public void add(){<br>            System.out.println(“add………….”);<br>        }<br>        public static void mian(String[] args){<br>        //原始方法<br>        //User user=new User();<br>        //user.add();<br>        }<br>    }</p>
+<p>创建一个实验类-PropertyDemo1.java：<br>    public class PropertyDemo1 {<br>        private String username；<br>        public PropertyDemo1（String username）<br>        {<br>            this.username = username；<br>        }<br>        public void test1(){<br>            System.out.println(“demo1….”+username);<br>        }<br>    }</p>
+<p>添加配置文件-bean1.xml：<br>在src中书写配置，注册对象到容器，<br>书写xml文件，applicationContext.xml放在src下：<br>    <?xml version="1.0" encoding="UTF-8"?><br>    <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns="http://www.springframework.org/schema/beans" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-4.2.xsd "></p>
+<pre><code>    &lt;bean  name=&quot;demo&quot; class=&quot;cn.itcast.bean.User&quot; &gt;//demo相当于使用ID，class为其所属包路径
+        &lt;!--使用参数注入，注入数据“小孩”--&gt;
+        &lt;constructor-arg name=&quot;username&quot; value=&quot;小孩&quot;&gt;&lt;/constructor-arg&gt;
+    &lt;/bean&gt;
+&lt;beans&gt;</code></pre><p>调用的测试方法-TestIOC.java<br>    public class TestIOC{<br>        @Test<br>        public void testUser(){<br>            //加载string配置文件<br>            ApplicationContext context = new ClassPathXmlApplicationContext(“bean1.xml”);<br>            //得到配置创建的对象<br>            PropertyDemo1 demo1 = (PropertyDemo1) context.getBean(“demo”);<br>            //执行其方法<br>            demo1.test1();<br>        }<br>    }</p>
+<h2 id="使用set方法输入属性"><a href="#使用set方法输入属性" class="headerlink" title="使用set方法输入属性"></a>使用set方法输入属性</h2><p>创建测试类：<br>    public class Book{<br>        private String bookname；<br>        //set方法<br>        public void demobook(){<br>            System.out.println(“book….”+bookname);<br>        }<br>    }</p>
+<p>配置文件添加：<br>    <bean  name="book" class="cn.itcast.property.Book" >//demo相当于使用ID，class为其所属包路径<br>        <!--注入属性值
+        name：类里定义的属性名
+        value：设置具体的值
+        --><br>        <property name="bookname" value="小孩"></property><br>    </bean></p>
+<p>测试类：<br>    public class TestIOC{<br>        @Test<br>        public void testUser(){<br>            //加载string配置文件<br>            ApplicationContext context = new ClassPathXmlApplicationContext(“bean1.xml”);<br>            //得到配置创建的对象<br>            Book book = (Book) context.getBean(“book”);<br>            //执行其方法<br>            book.demobook();<br>        }<br>    }</p>
 
       
 
