@@ -6,16 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>MCMod of ComposedTable | Jdld</title>
+  <title>How to Use Spring | Jdld</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="合成表基本结构将文件放在：main-》resources-》assets-》tm【ModID】-》recipes{  “type”: “minecraft:crafting_shapeless”,&#x2F;&#x2F;合成位置（这里是自带的2X2合成格）  “ingredients”: [    {      “item”: “minecraft:sand”,&#x2F;&#x2F;原版物品      “data”:32767">
+  <meta name="description" content="使用参数注入属性创建用户类-User.java：public class User { private String username; &#x2F;&#x2F;有参构造,就没有无参构造即无法创建对象 public User(String username) {     this.username = username; } public void add(){     System.out.println(&amp;quo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MCMod of ComposedTable">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;05&#x2F;MCMod-of-ComposedTable&#x2F;index.html">
+<meta property="og:title" content="How to Use Spring">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;05&#x2F;How-to-Use-Spring&#x2F;index.html">
 <meta property="og:site_name" content="Jdld">
-<meta property="og:description" content="合成表基本结构将文件放在：main-》resources-》assets-》tm【ModID】-》recipes{  “type”: “minecraft:crafting_shapeless”,&#x2F;&#x2F;合成位置（这里是自带的2X2合成格）  “ingredients”: [    {      “item”: “minecraft:sand”,&#x2F;&#x2F;原版物品      “data”:32767">
+<meta property="og:description" content="使用参数注入属性创建用户类-User.java：public class User { private String username; &#x2F;&#x2F;有参构造,就没有无参构造即无法创建对象 public User(String username) {     this.username = username; } public void add(){     System.out.println(&amp;quo">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-05T04:13:11.612Z">
+<meta property="og:updated_time" content="2019-11-05T06:01:23.667Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Jdld" type="application/atom+xml">
@@ -130,27 +130,51 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-MCMod-of-ComposedTable" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-How-to-Use-Spring" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      MCMod of ComposedTable
+      How to Use Spring
     </h1>
   
 
         
-        <a href="/2019/11/05/MCMod-of-ComposedTable/" class="archive-article-date">
-  	<time datetime="2019-11-05T04:06:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-05</time>
+        <a href="/2019/11/05/How-to-Use-Spring/" class="archive-article-date">
+  	<time datetime="2019-11-05T05:45:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="合成表基本结构"><a href="#合成表基本结构" class="headerlink" title="合成表基本结构"></a>合成表基本结构</h2><p>将文件放在：<br>main-》resources-》assets-》tm【ModID】-》recipes<br>{<br>  “type”: “minecraft:crafting_shapeless”,//合成位置（这里是自带的2X2合成格）<br>  “ingredients”: [<br>    {<br>      “item”: “minecraft:sand”,//原版物品<br>      “data”:32767<br>    },<br>    {<br>      “item”: “minecraft:sand”,//原版物品<br>      “data”:32767<br>    }<br>  ],<br>  “result”: {<br>    “item”: “tm:obsidian_boots”,//自定义mod物品<br>    “data”: 0,<br>    “count”: 1<br>  }<br>}</p>
+        <h2 id="使用参数注入属性"><a href="#使用参数注入属性" class="headerlink" title="使用参数注入属性"></a>使用参数注入属性</h2><p>创建用户类-User.java：<br>public class User {</p>
+<pre><code>private String username;
+//有参构造,就没有无参构造即无法创建对象
+public User(String username) {
+    this.username = username;
+}
+public void add(){
+    System.out.println(&quot;add.............&quot;);
+}
+public static void mian(String[] args){
+//原始方法
+//User user=new User();
+//user.add();
+}</code></pre><p>}</p>
+<p>创建一个实验类-PropertyDemo1.java：<br>public class PropertyDemo1 {<br>    private String username；<br>    public PropertyDemo1（String username）<br>    {<br>        this.username = username；<br>    }<br>    public void test1(){<br>        System.out.println(“demo1….”+username);<br>    }<br>}</p>
+<p>添加配置文件-bean1.xml：<br>在src中书写配置，注册对象到容器，<br>书写xml文件，applicationContext.xml放在src下：<br><?xml version="1.0" encoding="UTF-8"?><br><beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://www.springframework.org/schema/beans" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-4.2.xsd "></p>
+<pre><code>&lt;bean  name=&quot;demo&quot; class=&quot;cn.itcast.bean.User&quot; &gt;//demo相当于使用ID，class为其所属包路径
+    &lt;!--使用参数注入，注入数据“小孩”--&gt;
+    &lt;constructor-arg name=&quot;username&quot; value=&quot;小孩&quot;&gt;&lt;/constructor-arg&gt;
+&lt;/bean&gt;</code></pre><beans>
+
+<p>调用的测试方法-TestIOC.java<br>public class TestIOC{<br>    @Test<br>    public void testUser(){<br>        //加载string配置文件<br>        ApplicationContext context = new ClassPathXmlApplicationContext(“bean1.xml”);<br>        //得到配置创建的对象<br>        PropertyDemo1 demo1 = (PropertyDemo1) context.getBean(“demo”);<br>        //执行其方法<br>        demo1.test1();<br>    }<br>}</p>
 
       
 
@@ -230,7 +254,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/05/MCMod-of-ComposedTable/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/05/How-to-Use-Spring/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -244,18 +268,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/05/How-to-Use-Spring/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          How to Use Spring
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/11/02/My-First-Post/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">第一篇文章</div>
+    <a href="/2019/11/05/MCMod-of-ComposedTable/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MCMod of ComposedTable</div>
       <i class="icon-circle-right"></i>
     </a>
   

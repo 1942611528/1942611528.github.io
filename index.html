@@ -129,6 +129,93 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-How-to-Use-Spring" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/05/How-to-Use-Spring/">How to Use Spring</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/05/How-to-Use-Spring/" class="archive-article-date">
+  	<time datetime="2019-11-05T05:45:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="使用参数注入属性"><a href="#使用参数注入属性" class="headerlink" title="使用参数注入属性"></a>使用参数注入属性</h2><p>创建用户类-User.java：<br>public class User {</p>
+<pre><code>private String username;
+//有参构造,就没有无参构造即无法创建对象
+public User(String username) {
+    this.username = username;
+}
+public void add(){
+    System.out.println(&quot;add.............&quot;);
+}
+public static void mian(String[] args){
+//原始方法
+//User user=new User();
+//user.add();
+}</code></pre><p>}</p>
+<p>创建一个实验类-PropertyDemo1.java：<br>public class PropertyDemo1 {<br>    private String username；<br>    public PropertyDemo1（String username）<br>    {<br>        this.username = username；<br>    }<br>    public void test1(){<br>        System.out.println(“demo1….”+username);<br>    }<br>}</p>
+<p>添加配置文件-bean1.xml：<br>在src中书写配置，注册对象到容器，<br>书写xml文件，applicationContext.xml放在src下：<br><?xml version="1.0" encoding="UTF-8"?><br><beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://www.springframework.org/schema/beans" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-4.2.xsd "></p>
+<pre><code>&lt;bean  name=&quot;demo&quot; class=&quot;cn.itcast.bean.User&quot; &gt;//demo相当于使用ID，class为其所属包路径
+    &lt;!--使用参数注入，注入数据“小孩”--&gt;
+    &lt;constructor-arg name=&quot;username&quot; value=&quot;小孩&quot;&gt;&lt;/constructor-arg&gt;
+&lt;/bean&gt;</code></pre><beans>
+
+<p>调用的测试方法-TestIOC.java<br>public class TestIOC{<br>    @Test<br>    public void testUser(){<br>        //加载string配置文件<br>        ApplicationContext context = new ClassPathXmlApplicationContext(“bean1.xml”);<br>        //得到配置创建的对象<br>        PropertyDemo1 demo1 = (PropertyDemo1) context.getBean(“demo”);<br>        //执行其方法<br>        demo1.test1();<br>    }<br>}</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/05/How-to-Use-Spring/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-MCMod-of-ComposedTable" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -214,7 +301,7 @@
       
         <h2 id="我的世界mod开发"><a href="#我的世界mod开发" class="headerlink" title="我的世界mod开发"></a>我的世界mod开发</h2><p>我的世界源码位置:<br>    External Libraries-&gt;forgeSrc-&gt;net-&gt;minecraft</p>
 <p>项目结构:<br>    src文件主要的物品制作-&gt;<br>      java:主要代码<br>      resources:模型材质</p>
-
+<h2 id="盔甲的制作"><a href="#盔甲的制作" class="headerlink" title="盔甲的制作"></a>盔甲的制作</h2>
       
 
       
