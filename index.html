@@ -155,8 +155,19 @@
 <blockquote>
 <p>建议使用VSCods编写-（提供用户交互）；<br>缩进来表示大括号等；<br>注解使用：#<br>语句省略了java的“；”号；<br>变量声明省略类型名，根据值判断，如：x=1(默认为int)；<br>不支持字符串拼接数字，如：”asd”+8，只能使用“，”连接，即:”asd”,7；<br>input输入，默认类型是字符串类型,可以通过类型转换嵌套，将输入类型转换为指定类型；<br>注意：使用中文注释时，在VSCod中是会报错的；<br>##基本输出：<br>Print(“I Love fishc.cmo”)<br>重复输出：<br>   print（“love”<em>8）<br>   将love连续输出8次<br>   print（“love\n”</em>8）<br>   将love排向输出8次<br>##类型转换<br>type（）//获取数据类型<br>使用类型名（）//转换类型<br>int（1.2）//转为int类型<br>float（）//转为float类型<br>bool（）//转为bool类型<br>str（10）//将10转换为字符串<br>“，”在字符串中相当于java里的+号，连接符号；<br>##逻辑运算符：<br>or<br>and<br>not<br>获取输入：<br>注意输入类型是什么就输入什么，否则无法执行；<br>temp = input(“123:”)<br>Gi=int (temp)<br>先显示”123：“<br>这时在输入如：2，就输出123：2<br>int（input（“输入转换为整数：”））<br>##原始字符串：<br>如：str=r‘C:\we’，就是原样输出（注意：最后不能有\，否则报错）；<br>##较长的字符串：<br>使用：“”“       ”“”<br>多行字符串使用“\”，<br>如:“asdasd<br>Asdasdasd<br>Asdasdasd”；<br>#循环：<br>ronud（转换数值，保留位数），如round（c，2），将c的值保留2位数</p>
 <blockquote>
-<p>While 条件：<br>   循环体<br>For 目标 in 表达式：<br>   循环体<br>   range（开始值，结束值，增量）如：<br>   for x in range（1，5）：<br>       print（x）<br>   输出：<br>   1<br>   2<br>   3<br>   4<br>   5<br>如：<br>fa=‘asd’<br>for i in fa：<br>   print（i，fa）<br>   Print (len(i))//打印字符长度<br>   Print (len(fa))//打印数组长度<br>打印:<br>a  asd<br>s  asd<br>d  asd<br>1<br>3<br>1<br>3<br>1<br>3；<br>##range:<br>语法：3个参数[]内为可选内容，<br>Step=1表示第三个参数的值默认为1；<br>其作用是生成一个从start参数的值开始到stop参数的值结束的数字序列；<br>如：<br>print(range(5))<br>输出：<br>range(0, 5) //从0开始往后5位<br>print(list(range(5)))<br>输出：<br>[0, 1, 2, 3, 4]<br>for i in range(1,5,2)://2为递增量，即一次加2<br>       print(i)<br>输出：<br>1<br>3<br>##if语句格式：<br>条件可以是：if x==2 or 3:；<br>if与else的对应，只与对应行相关，不采用就近原则对应；<br>如：<br>   x=2<br>   if x==0:<br>       print(“123”)<br>   else:<br>       print(“321”)<br>   改进对于else if：<br>   elif 条件：<br>   如：<br>   x=2<br>   if 100&gt;x:<br>       print(“A”)<br>   elif 90&gt;x:<br>       print(“B”)<br>   对于：<br>   x=2<br>   y=1<br>   if x&lt;y:<br>       Sm=x<br>   else:<br>       Sm=y<br>   print(Sm)<br>   可以改进为：<br>   x=2<br>   y=1<br>   Sm=x if x &lt;y else y<br>print(Sm)<br>##时间模块：<br>5秒后关闭<br>import time//引入时间模块<br>time.sleep(5)//程序静止5秒<br>##断言：<br>可以用于测试；<br>属于if语序，当条件为假时，程序自动崩溃并抛出异常；<br>如：assert 3&gt;4</p>
+<p>While 条件：<br>   循环体<br>For 目标 in 表达式：<br>   循环体<br>   range（开始值，结束值，增量）如：<br>   for x in range（1，5）：<br>       print（x）<br>   输出：<br>   1<br>   2<br>   3<br>   4<br>   5<br>如：<br>fa=‘asd’<br>for i in fa：<br>   print（i，fa）<br>   Print (len(i))//打印字符长度<br>   Print (len(fa))//打印数组长度<br>打印:<br>a  asd<br>s  asd<br>d  asd<br>1<br>3<br>1<br>3<br>1<br>3；</p>
 </blockquote>
+</blockquote>
+<p>##range:</p>
+<blockquote>
+<p>语法：3个参数[]内为可选内容，<br>Step=1表示第三个参数的值默认为1；<br>其作用是生成一个从start参数的值开始到stop参数的值结束的数字序列；</p>
+<blockquote>
+<p>如：<br>print(range(5))<br>输出：<br>range(0, 5) //从0开始往后5位<br>print(list(range(5)))<br>输出：<br>[0, 1, 2, 3, 4]<br>for i in range(1,5,2)://2为递增量，即一次加2<br>       print(i)<br>输出：<br>1<br>3</p>
+</blockquote>
+</blockquote>
+<p>##if语句格式：<br>条件可以是：if x==2 or 3:；<br>if与else的对应，只与对应行相关，不采用就近原则对应；</p>
+<blockquote>
+<p>如：<br>   x=2<br>   if x==0:<br>       print(“123”)<br>   else:<br>       print(“321”)<br>   改进对于else if：<br>   elif 条件：<br>   如：<br>   x=2<br>   if 100&gt;x:<br>       print(“A”)<br>   elif 90&gt;x:<br>       print(“B”)<br>   对于：<br>   x=2<br>   y=1<br>   if x&lt;y:<br>       Sm=x<br>   else:<br>       Sm=y<br>   print(Sm)<br>   可以改进为：<br>   x=2<br>   y=1<br>   Sm=x if x &lt;y else y<br>print(Sm)<br>##时间模块：<br>5秒后关闭<br>import time//引入时间模块<br>time.sleep(5)//程序静止5秒<br>##断言：<br>可以用于测试；<br>属于if语序，当条件为假时，程序自动崩溃并抛出异常；<br>如：assert 3&gt;4</p>
 </blockquote>
 
       
