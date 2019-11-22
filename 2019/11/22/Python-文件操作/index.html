@@ -6,16 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>How to Use Spring | Jdld</title>
+  <title>Python 文件操作 | Jdld</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用参数注入属性创建用户类-User.java：123456789101112131415public class User &amp;#123;	private String username;	&#x2F;&#x2F;有参构造,就没有无参构造即无法创建对象	public User(String username) &amp;#123;		this.username = username;	&amp;#125;	public void a">
+  <meta name="description" content="##主要代码需要注意的是，本代码使用VSCoDs编写，不支持支持中文字符在代码注解中； 1234567891011121314151617181920212223242526272829303132333435363738394041# How to read and wirle the textdef save(boy,girl,count):    # test the data    # p">
 <meta property="og:type" content="article">
-<meta property="og:title" content="How to Use Spring">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;05&#x2F;How-to-Use-Spring&#x2F;index.html">
+<meta property="og:title" content="Python 文件操作">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;Python-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C&#x2F;index.html">
 <meta property="og:site_name" content="Jdld">
-<meta property="og:description" content="使用参数注入属性创建用户类-User.java：123456789101112131415public class User &amp;#123;	private String username;	&#x2F;&#x2F;有参构造,就没有无参构造即无法创建对象	public User(String username) &amp;#123;		this.username = username;	&amp;#125;	public void a">
+<meta property="og:description" content="##主要代码需要注意的是，本代码使用VSCoDs编写，不支持支持中文字符在代码注解中； 1234567891011121314151617181920212223242526272829303132333435363738394041# How to read and wirle the textdef save(boy,girl,count):    # test the data    # p">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-05T07:02:14.341Z">
+<meta property="og:updated_time" content="2019-11-22T02:54:08.400Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Jdld" type="application/atom+xml">
@@ -130,41 +130,28 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-How-to-Use-Spring" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Python-文件操作" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      How to Use Spring
+      Python 文件操作
     </h1>
   
 
         
-        <a href="/2019/11/05/How-to-Use-Spring/" class="archive-article-date">
-  	<time datetime="2019-11-05T05:45:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-05</time>
+        <a href="/2019/11/22/Python-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" class="archive-article-date">
+  	<time datetime="2019-11-22T02:50:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="使用参数注入属性"><a href="#使用参数注入属性" class="headerlink" title="使用参数注入属性"></a>使用参数注入属性</h1><h2 id="创建用户类-User-java："><a href="#创建用户类-User-java：" class="headerlink" title="创建用户类-User.java："></a>创建用户类-User.java：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public class User &#123;</span><br><span class="line">	private String username;</span><br><span class="line">	//有参构造,就没有无参构造即无法创建对象</span><br><span class="line">	public User(String username) &#123;</span><br><span class="line">		this.username = username;</span><br><span class="line">	&#125;</span><br><span class="line">	public void add()&#123;</span><br><span class="line">		System.out.println(&quot;add.............&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	public static void mian(String[] args)&#123;</span><br><span class="line">	//原始方法</span><br><span class="line">	//User user=new User();</span><br><span class="line">	//user.add();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="创建一个实验类-PropertyDemo1-java："><a href="#创建一个实验类-PropertyDemo1-java：" class="headerlink" title="创建一个实验类-PropertyDemo1.java："></a>创建一个实验类-PropertyDemo1.java：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class PropertyDemo1 &#123;</span><br><span class="line">	private String username；</span><br><span class="line">	public PropertyDemo1（String username）</span><br><span class="line">	&#123;</span><br><span class="line">		this.username = username；</span><br><span class="line">	&#125;</span><br><span class="line">	public void test1()&#123;</span><br><span class="line">		System.out.println(&quot;demo1....&quot;+username);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="添加配置文件-bean1-xml："><a href="#添加配置文件-bean1-xml：" class="headerlink" title="添加配置文件-bean1.xml："></a>添加配置文件-bean1.xml：</h2><p>在src中书写配置，注册对象到容器，<br>书写xml文件，applicationContext.xml放在src下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;beans xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; </span><br><span class="line">xmlns=&quot;http://www.springframework.org/schema/beans&quot; </span><br><span class="line">xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans </span><br><span class="line">http://www.springframework.org/schema/beans/spring-beans-4.2.xsd &quot;&gt;</span><br><span class="line">	&lt;bean  name=&quot;demo&quot; class=&quot;cn.itcast.bean.User&quot; &gt;//demo相当于使用ID，class为其所属包路径</span><br><span class="line">		&lt;!--使用参数注入，注入数据“小孩”--&gt;</span><br><span class="line">		&lt;constructor-arg name=&quot;username&quot; value=&quot;小孩&quot;&gt;&lt;/constructor-arg&gt;</span><br><span class="line">	&lt;/bean&gt;</span><br><span class="line">&lt;beans&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="调用的测试方法-TestIOC-java"><a href="#调用的测试方法-TestIOC-java" class="headerlink" title="调用的测试方法-TestIOC.java"></a>调用的测试方法-TestIOC.java</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class TestIOC&#123;</span><br><span class="line">	@Test</span><br><span class="line">	public void testUser()&#123;</span><br><span class="line">		//加载string配置文件</span><br><span class="line">		ApplicationContext context = new ClassPathXmlApplicationContext(&quot;bean1.xml&quot;);</span><br><span class="line">		//得到配置创建的对象</span><br><span class="line">		PropertyDemo1 demo1 = (PropertyDemo1) context.getBean(&quot;demo&quot;);</span><br><span class="line">		//执行其方法</span><br><span class="line">		demo1.test1();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="使用set方法输入属性"><a href="#使用set方法输入属性" class="headerlink" title="使用set方法输入属性"></a>使用set方法输入属性</h2><p>创建测试类：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class Book&#123;</span><br><span class="line">	private String bookname；</span><br><span class="line">	//set方法</span><br><span class="line">	public void demobook()&#123;</span><br><span class="line">		System.out.println(&quot;book....&quot;+bookname);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="配置文件添加："><a href="#配置文件添加：" class="headerlink" title="配置文件添加："></a>配置文件添加：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean  name=&quot;book&quot; class=&quot;cn.itcast.property.Book&quot; &gt;//demo相当于使用ID，class为其所属包路径</span><br><span class="line">	&lt;!--注入属性值</span><br><span class="line">	name：类里定义的属性名</span><br><span class="line">	value：设置具体的值</span><br><span class="line">	--&gt;</span><br><span class="line">	&lt;property name=&quot;bookname&quot; value=&quot;小孩&quot;&gt;&lt;/property&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="测试类-TestIOC："><a href="#测试类-TestIOC：" class="headerlink" title="测试类-TestIOC："></a>测试类-TestIOC：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class TestIOC&#123;</span><br><span class="line">	@Test</span><br><span class="line">	public void testUser()&#123;</span><br><span class="line">		//加载string配置文件</span><br><span class="line">		ApplicationContext context = new ClassPathXmlApplicationContext(&quot;bean1.xml&quot;);</span><br><span class="line">		//得到配置创建的对象</span><br><span class="line">		Book book = (Book) context.getBean(&quot;book&quot;);</span><br><span class="line">		//执行其方法</span><br><span class="line">		book.demobook();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<hr>
-
+        <p>##主要代码<br>需要注意的是，本代码使用VSCoDs编写，<br>不支持支持中文字符在代码注解中；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"># How to read and wirle the text</span><br><span class="line">def save(boy,girl,count):</span><br><span class="line">    # test the data</span><br><span class="line">    # print(&quot;boy.svae:&quot;,boy)</span><br><span class="line">    # print(&quot;girl.svae:&quot;,girl)</span><br><span class="line"># firl the tager file</span><br><span class="line">    fil_b=&apos;E:\\Python\\boy_&apos;+str(count) +&apos;.txt&apos;</span><br><span class="line">    fil_g=&apos;E:\\Python\\girl_&apos;+str(count) +&apos;.txt&apos;</span><br><span class="line">    boy_file=open(fil_b,&apos;w&apos;)</span><br><span class="line">    girl_file=open(fil_g,&apos;w&apos;)</span><br><span class="line"># write boy or girl to the file</span><br><span class="line">    boy_file.writelines(boy)</span><br><span class="line">    girl_file.writelines(girl)</span><br><span class="line"># close the file</span><br><span class="line">    boy_file.close()</span><br><span class="line">    girl_file.close()</span><br><span class="line"></span><br><span class="line">f = open(&apos;E:\\Python\\test.txt&apos;)</span><br><span class="line">boy=[]</span><br><span class="line">girl=[]</span><br><span class="line">count=1</span><br><span class="line">for ec in f:</span><br><span class="line">    if ec[:6] !=&apos;------&apos;:</span><br><span class="line">        (ro,li)=ec.split(&apos;:&apos;,1)</span><br><span class="line">        if ro==&apos;111&apos;:</span><br><span class="line">            boy.append(li)</span><br><span class="line">            # test date</span><br><span class="line">            # print(&quot;boy.for&quot;,boy)</span><br><span class="line">        if ro==&apos;9&apos;:</span><br><span class="line">            girl.append(li)</span><br><span class="line">            # go to the up</span><br><span class="line">            # print(&quot;girl.for&quot;,girl)</span><br><span class="line">    else:</span><br><span class="line">        # print(&quot;执行save方法&quot;)</span><br><span class="line">        save(boy,girl,count)</span><br><span class="line"></span><br><span class="line">        boy=[]</span><br><span class="line">        girl=[]</span><br><span class="line">        count +=1</span><br><span class="line">save(boy,girl,count)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
       
 
       
@@ -243,7 +230,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/05/How-to-Use-Spring/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/22/Python-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -257,18 +244,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/22/Python-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Python 文件操作
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/11/05/MCMod-of-ComposedTable/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">MCMod of ComposedTable</div>
+    <a href="/2019/11/05/How-to-Use-Spring/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">How to Use Spring</div>
       <i class="icon-circle-right"></i>
     </a>
   
